@@ -1,5 +1,15 @@
-var firstName = prompt("What is your first name?");
-var lastName = prompt("What is your last name?");
 var age = prompt("What is your age?");
-console.log("Your name is " + firstName + " " + lastName + ".");
-console.log("You are " + age + " years old.");
+if (age < 0) {
+console.log("Error: your age can not be negative.");
+}
+else if (age === 21) {
+    console.log("Happy 21st birthday.");
+} 
+
+if (age % 2 !== 0) {
+    console.log("Your age is odd.")
+}
+
+if (Number.isInteger(Math.sqrt(age))) {
+    console.log("Your age is a perfect square.")
+}
