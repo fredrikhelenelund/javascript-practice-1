@@ -1,15 +1,34 @@
-var age = prompt("What is your age?");
-if (age < 0) {
-console.log("Error: your age can not be negative.");
-}
-else if (age === 21) {
-    console.log("Happy 21st birthday.");
-} 
 
-if (age % 2 !== 0) {
-    console.log("Your age is odd.")
+
+// function isEven(num) {
+//     var num;
+
+//     if (num % 2 === 0) {
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// }
+
+
+// function factorial(num) {
+    
+//     var result = num;
+
+//     if (num === 0 || num === 1) {
+//         return 1;
+//     }
+
+//     while (num > 1) {
+//         num--;
+//         result = result * num;
+//     }
+//     return result;
+// }
+
+function kebabToSnake(kebab) {
+    var snake = kebab.replace(/-/g, "_");
+    return snake;
 }
 
-if (Number.isInteger(Math.sqrt(age))) {
-    console.log("Your age is a perfect square.")
-}
