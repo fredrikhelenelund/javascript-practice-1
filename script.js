@@ -1,34 +1,41 @@
+window.setTimeout(function() {
+var todos = ["Buy new turtle"];
 
+var input = prompt("What would you like to do?");
 
-// function isEven(num) {
-//     var num;
+while(input !== "quit"){
+    if(input === "list") {
+        listTodos();
 
-//     if (num % 2 === 0) {
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
-// }
+    } else if(input === "new") {
+        addTodo();
 
-
-// function factorial(num) {
-    
-//     var result = num;
-
-//     if (num === 0 || num === 1) {
-//         return 1;
-//     }
-
-//     while (num > 1) {
-//         num--;
-//         result = result * num;
-//     }
-//     return result;
-// }
-
-function kebabToSnake(kebab) {
-    var snake = kebab.replace(/-/g, "_");
-    return snake;
+    } else if(input === "delete") {
+        deleteTodo();
+    }
+    var input = prompt("What would you like to do?");
 }
+console.log("Okay, you quit the app.");
+
+function listTodos() {
+    todos.forEach(function(todo, i){
+        console.log("**********");
+        console.log(i + ": " + todo);
+    });
+    console.log("**********");
+}
+
+function addTodo() {
+    var newTodo = prompt("Enter new todo");
+    todos.push(newTodo);
+    console.log("Added todo");
+}
+
+function deleteTodo() {
+    var index = prompt("Enter index of todo to delete");
+    todos.splice(index,1);
+    console.log("Deleted todo");
+}
+
+}, 500);
 
